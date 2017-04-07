@@ -214,22 +214,27 @@ nav.solid #logo .logo {
   transform: scale(1.1);
 }
 
-.grid figure, img:hover, span{
+.grid figure, img:hover, .name:hover{
     transition: 0.5s;
 }
 
-span {
+.name {
   position:absolute;
   width: 300px;
   height: 300px;
 }
 
 .name:hover{
-    text-align: center;
+  text-align: center;
   color: white;
-  left: 0;
-  top: 0;
   background-color: rgba(255, 245, 0, 0.48);
+  bottom: 0;
+  width: 300px;
+}
+
+span{
+  width: 300px;
+  height: 300px;
 }
 
 figure > figcaption {
