@@ -4,17 +4,13 @@
 }
 
 body, html{
-  margin: 20px;
   padding: 0;
+  margin: 0;;
 }
 
 a{
   cursor: pointer;
   text-decoration: none;
-}
-
-header{
-  width:100%;
 }
 
 /*Direct style for nav tag*/
@@ -116,7 +112,7 @@ nav.open ul li {
   text-align: left;
   background-position: 50% 50%;
   background-repeat: no-repeat;
-  background-image: url(../img/icon/logo.png);
+  background-image: url(../img/icon/laboratoria.svg);
 }
 .open .logo,
 nav.solid #logo .logo {
@@ -188,55 +184,112 @@ nav.solid #logo .logo {
   transform: rotate(-45deg);
 }
 
+.meets{
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  }
+/* TypeWrriten */
+.text{
+  margin-top: -20px;
+    padding: 0;
+}
+
+.writer{
+  color: lime;
+  font-family: "Courier";
+  font-size: 20px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-align: center;
+  background-color: rgb(5, 10, 40);
+  padding: 80px;
+  animation: type 4s steps(60, end);
+}
+
+.writer:nth-child(2){
+  animation: type2 8s steps(60, end);
+}
+
+@keyframes type{
+  from { width: 0; }
+}
+
+@keyframes type2{
+  0%{width: 0;}
+  50%{width: 0;}
+  100%{ width: 100; }
+}
+
+@keyframes blink{
+  to{opacity: .0;}
+}
 
 /* Grid */
 .grid{
-  margin-top: 150px;
+  margin-top: 80px;
   text-align: center;
+  display: block;
 }
 
-.grid figure{
-  margin: -2px;
-  margin-right: -3px;
+figure{
   width: 300px;
   height: 300px;
-  display: inline-block;
   overflow: hidden;
-  position:relative;
+  position: relative;
+  display: inline-block;
+  margin: -3px;
 }
 
-.grid figure img{
-  width: 300px;
-  height: 300px;
-}
-
-.grid figure img:hover {
-  transform: scale(1.1);
-}
-
-.grid figure, img:hover, .name:hover{
-    transition: 0.5s;
-}
-
-.name {
-  position:absolute;
-  width: 300px;
-  height: 300px;
-}
-
-.name:hover{
+figcaption{
+  position: absolute;
+  left: 0; right: 0;
+  top: 0; bottom: 0;
   text-align: center;
-  color: white;
-  background-color: rgba(255, 245, 0, 0.48);
-  bottom: 0;
-  width: 300px;
+  font-weight: bold;
+  width: 100%;
+  height: 100%;
+  display: table;
 }
 
-span{
+figcaption span{
+  display: table-cell;
+  vertical-align: middle;
+  position: relative;
+  top: 20px;
+  opacity: 0;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+
+figure img{
+  transition: all 0.7s;
   width: 300px;
   height: 300px;
 }
 
-figure > figcaption {
-  margin-top: -10px;
+figure:hover figcaption{
+  background: rgba(255, 253, 10, 0.4);
+}
+
+figcaption:hover span{
+  opacity: 1;
+  top: 0;
+}
+
+figcaption:hover span:after{
+  width: 50%;
+}
+figure:hover img{
+  transform: scale(1.2);
+}
+
+
+/* Footer*/
+footer{
+  color: white;
+  font-size: 20px;
+  text-align: center;
+  background-color: rgb(5, 10, 40);
+  padding: 15px;
 }
